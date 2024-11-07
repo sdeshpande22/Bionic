@@ -1,0 +1,10 @@
+uvicorn
+pip-tools
+fastapi
+python-multipart
+requests
+beautifulsoup4
+transformers
+torch
+python-docx
+PyMuPDF
