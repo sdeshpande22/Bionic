@@ -1,3 +1,4 @@
+import uvicorn
 from fastapi import FastAPI, Form, UploadFile, File, HTTPException
 from fastapi.responses import HTMLResponse
 from fastapi.staticfiles import StaticFiles
@@ -166,3 +167,6 @@ def process_bionic_reader(text):
     
     # Apply the Bionic Reader effect (split the word in half and bold the first part)
     return " ".join(f"<b>{word[:len(word) // 2]}</b>{word[len(word) // 2:]}" for word in text.split() if word)
+
+if __name__ == '__main__':
+    uvicorn.run(app)
